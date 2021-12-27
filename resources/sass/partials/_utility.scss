@@ -1,0 +1,18 @@
+/* Reset Rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', 'Arial',
+        sans-serif;
+    color: #4d545d;
+    font-size: 1rem;
+    font-weight: 300;
+}

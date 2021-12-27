@@ -1,0 +1,97 @@
+@import 'partials/variables';
+
+@import 'partials/common';
+
+@import 'partials/utility';
+
+
+/* Header */
+#site_header {
+    background-image: linear-gradient(to right, $laracast_light_primary_color, $laracast_dark_primary_color);
+
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        &>img {
+            cursor: pointer;
+        }
+
+        .center {
+            ul>li {
+                display: inline;
+                list-style: none;
+                padding: 0 1.75rem 0 1.75rem;
+            }
+
+            a {
+                color: $laracast_light_grey_text_color;
+                font-family: $laracast_cabin;
+                font-size: 15px;
+                font-weight: 500;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 0 0.3rem 1rem 0.3rem;
+
+                &.active {
+                    color: $laracast_white;
+                    border-bottom: 4px solid $laracast_white;
+                }
+
+                &:hover {
+                    color: $laracast_white;
+                    border-bottom: 4px solid $laracast_white;
+                    transition: 0.3s linear;
+                }
+            }
+        }
+
+        .right {
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                background-color: rgba($laracast_white, 0.1);
+                border-radius: 1rem;
+                padding: 0.7rem;
+
+                &:hover {
+                    background-color: rgba($laracast_white, 0.25);
+                    transition: 0.3s linear;
+                    cursor: pointer;
+                }
+            }
+
+            a {
+                margin-left: 1.4rem;
+                color: $laracast_white;
+                font-family: $laracast_poppins;
+                font-size: 13px;
+                font-weight: 500;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.get_started {
+                    border: 1px solid $laracast_white;
+                    padding: 0.3rem 0.75rem 0.3rem 0.75rem;
+                    border-radius: 5rem;
+
+                    &:hover {
+                        background-color: $laracast_white;
+                        color: $laracast_footer_blue;
+                        text-decoration: none;
+                        transition: .3s linear;
+                    }
+                }
+            }
+        }
+
+    }
+}
