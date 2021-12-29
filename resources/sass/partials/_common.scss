@@ -3,12 +3,146 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap');
 
-.container {
-    width: 100%;
+
+.section {
+    max-width: 1166px;
     margin: auto;
-    padding: 2.5rem 1.875rem;
+    margin-top: 2rem;
+}
+
+.section_title {
+    max-width: 650px;
+    margin: 5rem auto 1rem auto;
+    padding-bottom: 1rem;
+    color: $laracast_dark_text_color;
+    text-align: center;
+    font-weight: 400;
+
+    h3 {
+        font-family: $laracast_cabin;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 0.02rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-family: $laracast_poppins;
+        font-size: 1rem;
+    }
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #78909c26;
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    margin-bottom: 2rem;
+}
+
+.small_card {
+    height: 260px;
+    overflow: hidden;
+    border: 1px solid #78909c26;
+    border-radius: 1rem;
 }
 
 .d_f {
     display: flex;
+}
+
+.align_items_center {
+    align-items: center;
+}
+
+.flex_end {
+    justify-content: flex-end;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.d_g {
+    display: grid;
+}
+
+.col {
+    max-width: 650px;
+}
+
+.bg_white {
+    background-color: $laracast_white;
+}
+
+.bg_dark_blue_gradient {
+    background-image: linear-gradient(90deg, $laracast_dark_primary_color, $laracast_light_primary_color);
+    border: none;
+}
+
+.bg_red_gradient {
+    background-image: linear-gradient(180deg, $laracast_light_red, $laracast_red);
+}
+
+.bg_blue_gradient {
+    background-image: linear-gradient(180deg, $laracast_light_blue, $laracast_blue);
+}
+
+.bg_purple_gradient {
+    background-image: linear-gradient(180deg, $laracast_light_purple, $laracast_purple);
+}
+
+.bg_yellow_gradient {
+    background-image: linear-gradient(180deg, $laracast_light_yellow, $laracast_yellow);
+}
+
+.bg_red {
+    background-color: $laracast_red;
+}
+
+.bg_purple {
+    background-color: $laracast_purple;
+}
+
+.bg_yellow {
+    background-color: $laracast_yellow;
+}
+
+.bg_blue {
+    background-color: $laracast_blue;
+}
+
+.bg_green {
+    background-color: $laracast_green;
+}
+
+a.active {
+    color: $laracast_white;
+    border-bottom: 4px solid $laracast_white;
+}
+
+a.larabit {
+    position: relative;
+
+    &::after {
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        background: linear-gradient(90deg, $laracast_light_blue 64%, transparent 0, transparent 68%, $laracast_light_blue 0, $laracast_light_blue 76%, transparent 0, transparent 80%, $laracast_light_blue 0, $laracast_light_blue 88%, transparent 0, transparent 92%, $laracast_light_blue 0, $laracast_light_blue);
+        content: "";
+    }
+}
+
+span.new {
+    position: absolute;
+    top: -6px;
+    background-color: $laracast_white;
+    border-radius: 1rem;
+    padding: 0.05rem 0.15rem;
+    font-size: 0.5rem;
+    color: $laracast_dark_text_color;
+    text-transform: none;
 }

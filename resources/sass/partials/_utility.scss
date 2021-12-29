@@ -9,10 +9,34 @@
 
 body {
     width: 100%;
+    background-color: $laracast_background_color;
     overflow-x: hidden;
     font-family: 'Poppins', 'Arial',
         sans-serif;
     color: #4d545d;
     font-size: 1rem;
     font-weight: 300;
+}
+
+h4,
+h5,
+h6 {
+    font-family: $laracast_cabin;
+    color: $laracast_white;
+    letter-spacing: 0.02rem;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 0.65rem;
+    font-weight: 400;
 }

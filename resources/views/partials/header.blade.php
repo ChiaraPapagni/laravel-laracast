@@ -5,15 +5,17 @@
             <ul>
                 @foreach(config('db.header_menu') as $item)
                 <li>
+                    @if($item['text'] === 'larabits')
+                    <a href="#" class="{{ Route::currentRouteName() === 'larabits' ? 'larabit' : '' }} larabit_new">
+                        {{ $item['text'] }}
+                        <span class="new">New!</span>
+                    </a>
+                    @else
                     <a href="#" class="{{ Route::currentRouteName() === $item['href'] ? 'active' : '' }}">
                         {{ $item['text'] }}
                     </a>
+                    @endif
                 </li>
-                <!-- <li><a href="#">Topics</a></li>
-                <li><a href="#" class="active">Series</a></li>
-                <li><a href="#">Larabits</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Podcast</a></li> -->
                 @endforeach
             </ul>
         </div>
