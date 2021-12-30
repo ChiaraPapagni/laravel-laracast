@@ -26,4 +26,3 @@
         </div>
     </nav>
 </header>
-<!-- /#site_header -->

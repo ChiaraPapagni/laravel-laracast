@@ -232,6 +232,72 @@ return [
             ],
         ],
     ],
+    'grow_tall' => [
+        [
+            'title' => 'Grow TALL',
+            'desc' =>
+                'Ready to embrace the TALL (Tailwind, AlpineJS, Laravel, Livewire) stack?',
+            'info' => [
+                [
+                    'type' => 'frameworks',
+                    'name' => 'Rebuild GitHub with Tailwind',
+                    'text' => "One of the best ways to improve your CSS is by rebuilding existing UIs. You’ll notice common patterns that occur and the best way to handle them. In this first entry, we'll focus on the GitHub UI.
+                    View the source code for this episode on GitHub.",
+                    'difficulty' => 'Intermediate',
+                    'episodes' => '5',
+                    'duration' => '1h 26m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/tailwind-css-rebuilds.svg',
+                ],
+                [
+                    'type' => 'frameworks',
+                    'name' => 'Alpine.js Essentials',
+                    'text' =>
+                        "Alpine.js is a relatively new JavaScript framework for defining behavior directly in your markup. While similar to frameworks like Angular and Vue, you may find that Alpine is a bit more light-weight and portable. In this series, one step at a time, I'll get you up and running as quickly as possible.",
+                    'difficulty' => 'Beginner',
+                    'episodes' => '11',
+                    'duration' => '2h 29m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/alpine-essentials.svg',
+                ],
+                [
+                    'type' => 'frameworks',
+                    'name' => 'Livewire Basics',
+                    'text' => 'Livewire has quickly become one of the most popular package for building Laravel applications. It allows you to create dynamic components within PHP, which often results in allowing you to skip the JavaScript layer entirely.
+
+                    In this series, we’ll go over the basics of Livewire and why/when you might reach for it. We’ll then build and test several practical Livewire components.',
+                    'difficulty' => 'Intermediate',
+                    'episodes' => '14',
+                    'duration' => '3h 2m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/livewire-basics.svg',
+                ],
+                [
+                    'type' => 'techniques',
+                    'name' => 'Modals with the TALL Stack',
+                    'text' =>
+                        "For such a simple concept, modals can often be tricky to implement. Where exactly do we place them? Where should the event listeners to toggle their display be stored? And how to we make them dynamic? In this series, one piece at a time, we'll discuss everything you need to know about modals within the TALL (Tailwind, Alpine, Laravel, Livewire) stack.",
+                    'difficulty' => 'Intermediate',
+                    'episodes' => '9',
+                    'duration' => '1h 17m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/modals-and-the-tall-stack.svg',
+                ],
+                [
+                    'type' => 'frameworks',
+                    'name' => 'Laravel 8 From Scratch',
+                    'text' => "We don't learn tools for the sake of learning tools. Instead, we learn them because they help us accomplish a particular goal. With that in mind, in this series, we'll use the common desire for a blog - with categories, tags, comments, email notifications, and more - as our goal. Laravel will be the tool that helps us get there. Each lesson, geared toward newcomers to Laravel, will provide instructions and techniques that will get you to the finish line.
+
+                    This version of our popular Laravel From Scratch series was recorded in 2021, and uses Laravel 8.",
+                    'difficulty' => 'Beginner',
+                    'episodes' => '70',
+                    'duration' => '9h 48m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/laravel-from-scratch-2021.svg',
+                ],
+            ],
+        ],
+    ],
     'build' => [
         [
             'title' => 'Build an App',
@@ -384,7 +450,7 @@ return [
             ],
         ],
     ],
-    'learn' => [
+    'learn_oop' => [
         [
             'title' => 'Learn OOP',
             'desc' =>
@@ -415,6 +481,86 @@ return [
                 ],
             ],
         ],
+    ],
+    'level_up' => [
+        [
+            'title' => 'Level Up Your Testing',
+            'desc' =>
+                'Imagine a workflow that alerts you each time a particular refactor was unsuccessful. How much more might you get done with that level of confidence?',
+            'info' => [
+                [
+                    'type' => 'testing',
+                    'name' => 'Code Katas with PHPUnit',
+                    'text' => "If martial artists use kata as a method for exercise and practice, what might be the equivalent for coders like us? Coding katas are short, repeatable programming challenges which are meant to exercise everything from your focus, to your workflow.
+
+                    In this series, one kata per episode, we'll work through a wide variety of challenges to build up your TDD process.",
+                    'difficulty' => 'Intermediate',
+                    'episodes' => '10',
+                    'duration' => '2h 58m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/code-katas-with-phpunit.svg',
+                ],
+                [
+                    'type' => 'framework',
+                    'name' => 'Build A Laravel App With TDD',
+                    'text' => "It's time to take the techniques we learned in Laravel From Scratch, and put them to good use building your first real-world application. Together, we'll leverage TDD to create Birdboard: a minimal Basecamp-like project management app.
+
+                    This series will give us a wide range of opportunities to pull up our sleeves and test our Laravel chops. As always, we start from scratch: laravel new birdboard.",
+                    'difficulty' => 'Intermediate',
+                    'episodes' => '44',
+                    'duration' => '8h 51m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/build-an-app-with-tdd.svg',
+                ],
+                [
+                    'type' => 'testing',
+                    'name' => 'Testing Laravel',
+                    'text' =>
+                        "Given the number of testing tools and resources available to PHP developers, it's no wonder why so many developers feel overwhelmed. In this series, we'll learn the ins and outs of PHPUnit testing, while working within your familiar Laravel application structure.",
+                    'difficulty' => 'Intermediate',
+                    'episodes' => '18',
+                    'duration' => '3h 53m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/testing-laravel.png',
+                ],
+                [
+                    'type' => 'testing',
+                    'name' => 'Testing Vue',
+                    'text' => "How in the world are we supposed to unit test Vue components? Is it even possible? Why, yes. Yes it is! I'll show you the full process, step by step. Not only will you learn the necessary tooling, but we'll also review the ins and outs of testing your client-side code.
+
+                    Have you ever wanted to use TDD for your Vue components? I'll show you how.",
+                    'difficulty' => 'Advanced',
+                    'episodes' => '10',
+                    'duration' => '2h 10m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/testing-vue.svg',
+                ],
+                [
+                    'type' => 'testing',
+                    'name' => 'Testing Jargon',
+                    'text' =>
+                        "There's no two ways about it: terminology in the testing world is incredibly overwhelming. Let's fix that! Bit by bit, we'll break all of these confusing concepts down as best as we can.",
+                    'difficulty' => 'Beginner',
+                    'episodes' => '8',
+                    'duration' => '1h 5m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/testing-jargon.svg',
+                ],
+                [
+                    'type' => 'framework',
+                    'name' => "Let's Build A Forum with Laravel and TDD",
+                    'text' =>
+                        "A forum is a deceptively complex thing. Sure, it's made up of threads and replies, but what else might exist as part of a forum? What about profiles, or thread subscriptions, or filtering, or real-time notifications? As it turns out, a forum is the perfect project to stretch your programming muscles. In this series, we'll work together to build one with tests from A to Z.",
+                    'difficulty' => 'Intermediate',
+                    'episodes' => '102',
+                    'duration' => '19h 29m',
+                    'thumbnail' =>
+                        'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/svg/lets-build-a-forum.svg',
+                ],
+            ],
+        ],
+    ],
+    'learn_laravel' => [
         [
             'title' => 'Learn Laravel',
             'desc' =>
@@ -445,6 +591,8 @@ return [
                 ],
             ],
         ],
+    ],
+    'new_to_laracast' => [
         [
             'title' => 'New to Laracasts?',
             'desc' =>

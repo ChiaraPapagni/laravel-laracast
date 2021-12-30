@@ -25,7 +25,7 @@
             <a class="name" href="#">{{ $element['name'] }}</a>
             <!-- /.name -->
 
-            <p class="text">{{ $element['text'] }}</p>
+            <p class="text clamp">{{ $element['text'] }}</p>
             <!-- /.text -->
 
             <div class="more_info d_f">

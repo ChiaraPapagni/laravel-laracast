@@ -1,4 +1,4 @@
-@foreach(config('db.master') as $item)
+@foreach(config('db.tools') as $item)
 <div class="section_title">
     <h3>{{ $item['title'] }}</h3>
     <p>{{ $item['desc'] }}</p>
@@ -154,3 +154,25 @@
                     @endforeach
                 </div>
                 @endforeach
+
+
+                <div class="more">
+                    @foreach(config('db.more_tools') as $item)
+                    <div class="card bg_dark_blue_gradient">
+                        <h4>{{ $item['title'] }}</h4>
+                        <div class="grid d_g">
+                            @foreach($item['info'] as $element)
+                            <div class="cell">
+                                <img src="{{ $element['thumb'] }}" alt="{{ $element['name'] }}">
+                                <h5 class="clamp">{{ $element['name'] }}</h5>
+                                <h6>{{ $element['date'] }}</h6>
+                                <p class="hide clamp">{{ $element['text'] }}</p>
+                                <a href="" class="start_series">Start Series</a>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <!-- /.section_bg -->
+                    @endforeach
+                </div>
+                <!-- /.more -->

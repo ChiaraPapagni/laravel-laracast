@@ -63,7 +63,7 @@
 
                         <div class="right">
                             <a class="name" href="#">{{ $element['name'] }}</a>
-                            <p class="text">{{ $element['text'] }}</p>
+                            <p class="text clamp">{{ $element['text'] }}</p>
 
                             <div class="more_info d_f">
                                 <div class="episodes d_f">

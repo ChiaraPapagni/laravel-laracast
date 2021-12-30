@@ -24,7 +24,7 @@
         <a class="name" href="#">{{ $element['name'] }}</a>
         <!-- /.name -->
 
-        <p class="text">{{ $element['text'] }}</p>
+        <p class="text clamp">{{ $element['text'] }}</p>
         <!-- /.text -->
 
         <div class="more_info d_f">
@@ -65,7 +65,7 @@
 @endforeach
 @endforeach
 
-<div class="more_updated">
+<div class="more">
     @foreach(config('db.more_updated') as $item)
     <div class="card bg_dark_blue_gradient">
         <h4>{{ $item['title'] }}</h4>
@@ -73,9 +73,9 @@
             @foreach($item['info'] as $element)
             <div class="cell">
                 <img src="{{ $element['thumb'] }}" alt="{{ $element['name'] }}">
-                <h5>{{ $element['name'] }}</h5>
+                <h5 class="clamp">{{ $element['name'] }}</h5>
                 <h6>{{ $element['date'] }}</h6>
-                <p class="hide">{{ $element['text'] }}</p>
+                <p class="hide clamp">{{ $element['text'] }}</p>
                 <a href="" class="start_series">Start Series</a>
             </div>
             @endforeach
@@ -84,4 +84,4 @@
     <!-- /.section_bg -->
     @endforeach
 </div>
-<!-- /.more_updated -->
+<!-- /.more -->

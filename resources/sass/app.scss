@@ -115,6 +115,7 @@
     }
 }
 
+
 /* Main */
 #site_main {
 
@@ -146,15 +147,12 @@
     }
 
     .text {
+        -webkit-line-clamp: 3;
         font-family: $laracast_poppins;
         font-size: 0.938rem;
         font-weight: 400;
         color: $laracast_grey_text_color;
         margin-bottom: 0.5rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
     }
 
     .more_info {
@@ -248,9 +246,9 @@
         }
     }
 
-
-    .more_updated>.card.bg_dark_blue_gradient {
+    .more>.card.bg_dark_blue_gradient {
         padding: 2rem 1.5rem 3rem 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .card.bg_dark_blue_gradient {
@@ -280,10 +278,7 @@
                 }
 
                 h5 {
-                    display: -webkit-box;
                     -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
                 }
 
                 h6,
@@ -292,13 +287,10 @@
                 }
 
                 p {
+                    -webkit-line-clamp: 3;
                     font-size: 0.65rem;
                     color: $laracast_white;
                     padding: 0.4rem 0 0.12rem 0;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
                 }
 
                 .start_series {
@@ -369,19 +361,13 @@
                 padding-right: 1.5rem;
 
                 h5 {
-                    display: -webkit-box;
                     -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
                     margin-top: -0.25rem;
                     margin-bottom: 0.5rem;
                 }
 
                 p {
-                    display: -webkit-box;
                     -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
                     font-size: 0.7rem;
                     opacity: .5;
                 }
@@ -397,6 +383,47 @@
                     transition: 0.3s;
                 }
             }
+        }
+    }
+
+    .trending {
+        position: relative;
+
+        .lary_trending {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            mix-blend-mode: luminosity;
+            opacity: 0.5;
+        }
+    }
+
+    .level_up {
+
+        .journey_testing {
+            width: 400px;
+            position: absolute;
+            left: 0;
+        }
+
+        .big_card {
+            padding: 2rem 0 1rem 250px;
+
+            a {
+                width: 315px;
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    .whats_new {
+        padding: 2rem;
+
+        .journey_frameworks {
+            width: 285px;
+            position: absolute;
+            top: 4rem;
+            left: 1rem;
         }
     }
 
@@ -459,7 +486,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
             background-color: rgba($laracast_white, 0.1);
             padding: 1.25rem 1rem;
             position: relative;
@@ -470,10 +496,7 @@
             }
 
             .text {
-                display: -webkit-box;
                 -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
                 font-size: 0.813rem;
                 margin: 1rem 0 2.5rem 0;
             }
@@ -503,6 +526,234 @@
 
             .start {
                 opacity: 1;
+            }
+        }
+    }
+
+    .double_card_left,
+    .double_card_right {
+        width: 50%;
+        position: relative;
+        padding-bottom: 1rem;
+
+        &>img {
+            width: 450px;
+            position: absolute;
+            top: -4rem;
+        }
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 265px;
+            height: 100%;
+
+            .name {
+                font-size: 1.125rem;
+            }
+
+            .text {
+                -webkit-line-clamp: 5;
+                font-size: 0.8rem;
+            }
+
+            .more_info {
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .start {
+                display: block;
+                font-size: 0.8rem;
+                text-align: center;
+                padding-top: 0.5rem 0 0.3rem 0;
+
+                a span {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .double_card_left {
+        &>img {
+            left: -14rem;
+        }
+
+        &>div {
+            margin-left: 16.85rem;
+            padding-right: 3rem;
+            border-right: 1px solid #78909c26;
+        }
+    }
+
+    .double_card_right {
+        &>img {
+            right: -14rem;
+        }
+
+        &>div {
+            left: 0rem;
+            padding-left: 3rem;
+            border-left: 1px solid #78909c26;
+        }
+    }
+}
+
+
+/* Footer */
+#site_footer {
+    background-image: radial-gradient(circle at 1% 1%, $laracast_footer_blue, $laracast_footer_dark_blue);
+
+    &>div {
+        background-image: url(../img/footer_gang.svg);
+        background-repeat: no-repeat;
+        background-position: top 0 right -200px;
+
+        &>.footer {
+            max-width: 1200px;
+            margin: auto;
+
+            .top_footer {
+                width: 50%;
+                margin: auto;
+                padding: 80px 0;
+                position: relative;
+
+                .mic {
+                    position: absolute;
+                    top: 0;
+                    left: -9.5rem;
+                }
+
+                h2 {
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+
+                .form {
+                    justify-content: center;
+
+                    input {
+                        width: 50%;
+                        border-radius: 1.25rem;
+                        border: none;
+                        font-family: $laracast_poppins;
+                        font-size: 0.8rem;
+                        padding: 0.75rem 1rem;
+                        margin-right: -2rem;
+
+                        &:focus-visible {
+                            outline: none;
+                        }
+                    }
+
+                    button.subscribe {
+                        width: 8rem;
+                        background-color: $laracast_footer_blue;
+                        border-radius: 1.25rem;
+                        border: none;
+                        font-family: $laracast_poppins;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        color: $laracast_white;
+                        text-align: right;
+                        text-transform: uppercase;
+                        padding: 0.75rem 2rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $laracast_footer_opaque_blue;
+                            transition: background-color .3s;
+                        }
+                    }
+                }
+            }
+
+            .bottom_footer {
+                padding-bottom: 2rem;
+                border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+
+                .about {
+                    width: 40%;
+                    margin-right: auto;
+
+                    &>img {
+                        width: 232px;
+                        margin-bottom: 0.75rem;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        color: $laracast_white;
+                        line-height: 1.7;
+                        margin-bottom: 2rem;
+                    }
+
+                    .social {
+                        img {
+                            width: 1.5rem;
+                            margin-right: 1rem;
+                            transition: .3s;
+
+                            &:hover {
+                                filter: invert(100%);
+                            }
+                        }
+                    }
+                }
+
+                .learn,
+                .discuss,
+                .extras {
+                    width: 16.66667%;
+
+                    h5 {
+                        font-size: 0.938rem;
+                        text-transform: uppercase;
+                        margin-bottom: 1.4rem;
+                    }
+
+                    ul {
+                        list-style: none;
+                        line-height: 1.7;
+
+                        a {
+                            color: $laracast_footer_text_grey;
+                            text-decoration: none;
+                            transform: 0.3s;
+
+                            &:hover {
+                                color: $laracast_white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .credits {
+                width: 50%;
+                margin: auto;
+                font-family: $laracast_poppins;
+                font-size: 0.8rem;
+                font-weight: 400;
+                color: $laracast_footer_text_grey;
+                text-align: center;
+                line-height: 1.5rem;
+                padding: 1rem 0;
+
+                a {
+                    font-weight: 700;
+                    color: $laracast_footer_text_grey;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $laracast_white;
+                        text-decoration: underline;
+                        transition: .3s;
+                    }
+                }
             }
         }
     }

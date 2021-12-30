@@ -1,4 +1,4 @@
-@foreach(config('db.trending') as $item)
+@foreach(config('db.level_up') as $item)
 <div class="section_title">
     <h3>{{ $item['title'] }}</h3>
     <p>{{ $item['desc'] }}</p>
@@ -6,8 +6,8 @@
 <!-- /.section_title -->
 
 
-<div class="trending bg_dark_blue_gradient card">
-    <img src="{{ asset('img/bot.svg') }}" class="lary_trending">
+<div class="level_up bg_green_dark_blue_gradient card">
+    <img src="{{ asset('img/journey_testing.svg') }}" class="journey_testing">
     <div class="big_card d_f wrap flex_end">
         @foreach($item['info'] as $element)
         <a href="" class="d_f align_items_center">

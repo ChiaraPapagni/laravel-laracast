@@ -1,75 +1,91 @@
-@foreach(config('db.master') as $item)
+@foreach(config('db.grow_tall') as $item)
 <div class="section_title">
     <h3>{{ $item['title'] }}</h3>
     <p>{{ $item['desc'] }}</p>
 </div>
 <!-- /.section_title -->
 
-@foreach($item['info'] as $index=>$element)
-@if($index === 0)
-<div class="card bg_white">
-    <div class="col">
-        @if($element['type'] === 'frameworks')
-        <a href="" class="type bg_red">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'tooling')
-        <a href="" class="type bg_purple">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'languages')
-        <a href="" class="type bg_yellow">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'techniques')
-        <a href="" class="type bg_blue">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'testing')
-        <a href="" class="type bg_green">{{ $element['type'] }}</a>
-        @endif
-        <!-- /.type -->
 
-        <a class="name" href="#">{{ $element['name'] }}</a>
-        <!-- /.name -->
-
-        <p class="text clamp">{{ $element['text'] }}</p>
-        <!-- /.text -->
-
-        <div class="more_info d_f">
-            <div class="difficulty d_f">
-                <div class="lines">
-                    <p class="block"></p>
-                    <p class="block"></p>
-                    <p class="block"></p>
-                </div>
-                <span>{{ $element['difficulty'] }} <br> Difficulty</span>
-            </div>
-            <div class="episodes d_f">
-                <img src="{{asset('img/books.svg')}}">
-                <span><a href="">{{ $element['episodes'] }} Lessons</a></span>
-            </div>
-            <div class="duration d_f">
-                <img src="{{asset('img/time.svg')}}">
-                <span>{{ $element['duration'] }}</span>
-            </div>
-        </div>
-        <!-- /.info -->
-
-        <div class="start">
-            <a href="">
-                <img src="{{asset('img/play.svg')}}">
-                <span>Start Series</span>
-            </a>
-        </div>
-        <!-- /.start -->
-    </div>
-    <!-- /.col -->
-
-    <div class="thumb">
+<div class="card bg_white d_f">
+    @foreach($item['info'] as $index=>$element)
+    @if($index === 0)
+    <div class="double_card_left">
         <img src="{{ $element['thumbnail'] }}" alt="{{ $element['name'] }}">
+        <!--/.thumbnail-->
+
+        <div>
+            <a class="name" href="#">{{ $element['name'] }}</a>
+            <!-- /.name -->
+
+            <p class="text clamp">{{ $element['text'] }}</p>
+            <!-- /.text -->
+
+            <div class="more_info d_f">
+                <div class="episodes d_f">
+                    <img src="{{asset('img/books.svg')}}">
+                    <span><a href="">{{ $element['episodes'] }} Lessons</a></span>
+                </div>
+                <div class="duration d_f">
+                    <img src="{{asset('img/time.svg')}}">
+                    <span>{{ $element['duration'] }}</span>
+                </div>
+            </div>
+            <!-- /.info -->
+
+            <div class="start">
+                <a href="">
+                    <img src="{{asset('img/play.svg')}}">
+                    <span>Start Series</span>
+                </a>
+            </div>
+            <!-- /.start -->
+        </div>
     </div>
-    <!-- /.thumb -->
+    <!-- /.double_card_left -->
+
+    @elseif($index === 1)
+    <div class="double_card_right">
+        <img src="{{ $element['thumbnail'] }}" alt="{{ $element['name'] }}">
+        <!--/.thumbnail-->
+
+        <div>
+            <a class="name" href="#">{{ $element['name'] }}</a>
+            <!-- /.name -->
+
+            <p class="text clamp">{{ $element['text'] }}</p>
+            <!-- /.text -->
+
+            <div class="more_info d_f">
+                <div class="episodes d_f">
+                    <img src="{{asset('img/books.svg')}}">
+                    <span><a href="">{{ $element['episodes'] }} Lessons</a></span>
+                </div>
+                <div class="duration d_f">
+                    <img src="{{asset('img/time.svg')}}">
+                    <span>{{ $element['duration'] }}</span>
+                </div>
+            </div>
+            <!-- /.info -->
+
+            <div class="start">
+                <a href="">
+                    <img src="{{asset('img/play.svg')}}">
+                    <span>Start Series</span>
+                </a>
+            </div>
+            <!-- /.start -->
+        </div>
+    </div>
+    <!-- /.double_card_right -->
+
+    @endif
+    @endforeach
 </div>
-@endif
-@endforeach
 
 
 <div class="d_g" style="grid-template-columns: auto auto auto; column-gap: 2.5rem;">
     @foreach($item['info'] as $index=>$element)
-    @if($index > 0)
+    @if($index > 1)
     <div class="small_card bg_white d_f">
         @if($element['type'] === 'frameworks')
         <div class="left bg_red_gradient">
