@@ -720,6 +720,37 @@ h6 {
   padding-left: 3rem;
   border-left: 1px solid #78909c26;
 }
+#site_main .explore_topics_grid {
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  row-gap: 1rem;
+  margin-bottom: 40px;
+}
+#site_main .topic_card {
+  height: 84px;
+  min-width: 205px;
+  background-color: #fff;
+  border: 1px solid rgba(135, 149, 161, 0.15);
+  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+#site_main .topic_card img {
+  margin-right: 1rem;
+}
+#site_main .topic_card h5 {
+  font-weight: 500;
+  color: #22292f;
+}
+#site_main .topic_card span {
+  font-size: 0.6rem;
+  color: #606f7b;
+}
+#site_main .topic_card span.dot {
+  font-size: 0.834rem;
+  padding: 0 0.3rem;
+}
 #site_main .show {
   max-width: 1600px;
   margin: auto;
