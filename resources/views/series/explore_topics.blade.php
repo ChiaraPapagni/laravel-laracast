@@ -7,7 +7,7 @@
 
 <div class="explore_topics_grid d_g">
     @foreach($item['info'] as $index=>$serie)
-    <div class="topic_card d_f align_items_center">
+    @if($index < 15) <div class="topic_card d_f align_items_center">
         <div class="d_f align_items_center">
             <img src="{{$serie['thumb']}}" alt="{{$serie['name']}}">
             <div>
@@ -19,9 +19,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.topic_card -->
-    @endforeach
+</div>
+<!-- /.topic_card -->
+@endif
+@endforeach
 </div>
 <!-- /.explore_topics_grid -->
 @endforeach
