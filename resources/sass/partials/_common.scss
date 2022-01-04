@@ -164,3 +164,29 @@ span.new {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+
+.bg_red_gradient_270 {
+    background-image: linear-gradient(270deg, $laracast_light_red, $laracast_red);
+    border-radius: 1rem;
+}
+
+.bg_purple_gradient_270 {
+    background-image: linear-gradient(270deg, $laracast_light_purple, $laracast_purple);
+    border-radius: 1rem;
+}
+
+.bg_blue_gradient_270 {
+    background-image: linear-gradient(270deg, $laracast_light_blue, $laracast_blue);
+    border-radius: 1rem;
+}
+
+.bg_green_gradient_270 {
+    background-image: linear-gradient(270deg, $laracast_light_green, $laracast_green);
+    border-radius: 1rem;
+}
+
+.bg_yellow_gradient_270 {
+    background-image: linear-gradient(270deg, $laracast_light_yellow, $laracast_yellow);
+    border-radius: 1rem;
+}

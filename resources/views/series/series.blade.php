@@ -4,7 +4,6 @@
 
 @section('content')
 
-
 <div class="section">
     @include('series.updated')
 </div>
@@ -65,6 +64,9 @@
 </div>
 <!-- /.section (New to Laracasts?) -->
 
+<div class="section">
+    @include('series.explore_topics')
+</div>
 <!-- /.section (Explore Topics) -->
 
 @endsection

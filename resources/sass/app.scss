@@ -119,8 +119,7 @@
 /* Main */
 #site_main {
 
-    .card {}
-
+    /* Series */
     .type {
         font-family: $laracast_poppins;
         font-size: 0.625rem;
@@ -597,6 +596,263 @@
             left: 0rem;
             padding-left: 3rem;
             border-left: 1px solid #78909c26;
+        }
+    }
+
+    /* Show */
+    .show {
+        max-width: 1600px;
+        margin: auto;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+
+        .show_top {
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+
+            img {
+                width: 246px;
+                height: 246px;
+                margin-right: 7rem;
+            }
+
+            .txt {
+                .desc {
+                    max-width: 600px;
+                    font-size: 0.9rem;
+                    color: $laracast_white;
+                    line-height: 1.5rem;
+                    margin-bottom: 3rem;
+                    margin-top: 2rem;
+                }
+
+                .series_buttons {
+                    margin-top: 1.5rem;
+
+                    a {
+                        width: auto;
+                        margin-right: 1rem;
+                        border-radius: 5rem;
+                        font-size: 0.83rem;
+                        font-weight: 500;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        padding: 0.65rem 2rem;
+                        transition: 0.3s;
+
+                        &.begin {
+                            background-color: $laracast_white;
+                            border-color: $laracast_white;
+                            color: $laracast_black;
+
+                            &:hover {
+                                color: $laracast_footer_blue;
+                            }
+                        }
+
+                        &.watchlist {
+                            background: rgba($laracast_white, 0.2);
+                            border-color: rgba($laracast_white, 0.3);
+                            color: $laracast_white;
+
+                            img {
+                                width: 8px;
+                                height: 11px;
+                                margin-right: 0.25rem;
+                            }
+
+                            &:hover {
+                                background-color: $laracast_white;
+                                color: $laracast_black;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .other {
+                width: 340px;
+                min-height: 373px;
+                height: 1px;
+                background-color: rgba($laracast_black, .1);
+                border-radius: 1rem;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 3rem;
+                font-size: 0.65rem;
+                color: rgba($laracast_white, 0.75);
+
+                .circle_border {
+                    width: 125px;
+                    min-height: 125px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 7px solid rgba($laracast_black, 0.2);
+                    border-radius: 100%;
+                    margin-bottom: 1rem;
+
+                    .circle {
+                        width: 100px;
+                        min-height: 100px;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $laracast_white;
+                        border-radius: 100%;
+                        font-size: 2.4rem;
+                        font-weight: 400;
+                        color: $laracast_black;
+                    }
+                }
+
+                h6 {
+                    font-weight: 700;
+                    color: rgba($laracast_white, 0.75);
+                    text-transform: uppercase;
+                }
+
+                .latest_episode {
+                    margin-bottom: 1rem;
+                }
+
+                .conclusion {
+                    font-size: 1rem;
+                    color: $laracast_white;
+                    margin-bottom: 0.5rem;
+                }
+
+                .conclusion_text {
+                    margin-bottom: 1rem;
+                }
+
+                .watch {
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba($laracast_white, .25);
+                    border: 1px solid rgba($laracast_white, .25);
+                    border-radius: 5rem;
+                    padding-bottom: 0.58rem;
+                    padding-top: 0.58rem;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    color: $laracast_white;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    transition: 0.3s;
+
+                    svg {
+                        margin-right: 0.5rem;
+
+                        path:nth-child(2) {
+                            fill: $laracast_white;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $laracast_white;
+                        color: $laracast_footer_blue;
+
+                        svg {
+                            path:nth-child(2) {
+                                fill: $laracast_footer_blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .show_bottom {
+            background-color: rgba($laracast_black, 0.1);
+            border-radius: 0 0 1rem 1rem;
+            padding: 0.938rem 1.875rem;
+
+            ul {
+                justify-content: space-between;
+                list-style: none;
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: $laracast_white;
+
+                .li_left {
+                    align-items: center;
+
+                    div {
+                        align-items: center;
+
+                        .lines {
+                            .line {
+                                display: inline-block;
+                                width: 7px;
+                                height: 11px;
+                                border-radius: 0.25rem;
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+
+                            .line_white {
+                                background-color: $laracast_white;
+                            }
+
+                            .line_black {
+                                background-color: rgba($laracast_black, .25);
+                            }
+                        }
+
+                        svg>path {
+                            opacity: 1;
+                            fill: $laracast_white;
+                        }
+
+                        span {
+                            margin-left: 0.5rem;
+                            margin-right: 1rem;
+                        }
+
+                        &.li_type {
+                            border: 1px solid hsla(0, 0%, 100%, .25);
+                            border-radius: 0.5rem;
+                            padding: 0.15rem 0.75rem;
+
+                            a {
+                                color: $laracast_white;
+                                text-decoration: none;
+                                text-transform: capitalize;
+                                transition: 0.3s;
+                            }
+
+                            &:hover {
+                                background-color: $laracast_white;
+
+                                a {
+                                    color: $laracast_footer_blue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .li_right {
+                    a {
+                        text-decoration: none;
+
+                        img {
+                            width: 25px;
+                            height: 25px;
+                            margin-left: 0.5rem;
+
+                            &:hover {
+                                filter: opacity(0.5);
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

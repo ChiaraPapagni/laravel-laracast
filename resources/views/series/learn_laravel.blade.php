@@ -1,4 +1,4 @@
-@foreach(config('db.learn_laravel') as $item)
+@foreach($series['learn_laravel'] as $item)
 <div class="section_title">
     <h3>{{ $item['title'] }}</h3>
     <p>{{ $item['desc'] }}</p>
@@ -6,27 +6,27 @@
 <!-- /.section_title -->
 
 <div class="card bg_white d_f">
-    @foreach($item['info'] as $index=>$element)
+    @foreach($item['info'] as $index=>$serie)
     @if($index === 0)
     <div class="double_card_left">
-        <img src="{{ $element['thumbnail'] }}" alt="{{ $element['name'] }}">
+        <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
         <!--/.thumbnail-->
 
         <div>
-            <a class="name" href="#">{{ $element['name'] }}</a>
+            <a class="name" href="#">{{ $serie['name'] }}</a>
             <!-- /.name -->
 
-            <p class="text clamp">{{ $element['text'] }}</p>
+            <p class="text clamp">{{ $serie['text'] }}</p>
             <!-- /.text -->
 
             <div class="more_info d_f">
                 <div class="episodes d_f">
                     <img src="{{asset('img/books.svg')}}">
-                    <span><a href="">{{ $element['episodes'] }} Lessons</a></span>
+                    <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
                 </div>
                 <div class="duration d_f">
                     <img src="{{asset('img/time.svg')}}">
-                    <span>{{ $element['duration'] }}</span>
+                    <span>{{ $serie['duration'] }}</span>
                 </div>
             </div>
             <!-- /.info -->
@@ -44,24 +44,24 @@
 
     @elseif($index === 1)
     <div class="double_card_right">
-        <img src="{{ $element['thumbnail'] }}" alt="{{ $element['name'] }}">
+        <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
         <!--/.thumbnail-->
 
         <div>
-            <a class="name" href="#">{{ $element['name'] }}</a>
+            <a class="name" href="#">{{ $serie['name'] }}</a>
             <!-- /.name -->
 
-            <p class="text clamp">{{ $element['text'] }}</p>
+            <p class="text clamp">{{ $serie['text'] }}</p>
             <!-- /.text -->
 
             <div class="more_info d_f">
                 <div class="episodes d_f">
                     <img src="{{asset('img/books.svg')}}">
-                    <span><a href="">{{ $element['episodes'] }} Lessons</a></span>
+                    <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
                 </div>
                 <div class="duration d_f">
                     <img src="{{asset('img/time.svg')}}">
-                    <span>{{ $element['duration'] }}</span>
+                    <span>{{ $serie['duration'] }}</span>
                 </div>
             </div>
             <!-- /.info -->

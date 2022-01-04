@@ -1,31 +1,31 @@
-@foreach(config('db.featured') as $item)
+@foreach($series['featured'] as $item)
 <div class="section_title">
     <h3>{{ $item['title'] }}</h3>
     <p>{{ $item['desc'] }}</p>
 </div>
 <!-- /.section_title -->
 
-@foreach($item['info'] as $element)
+@foreach($item['info'] as $serie)
 <div class="section_info">
     <div class="card bg_white">
         <div class="col">
-            @if($element['type'] === 'frameworks')
-            <a href="" class="type bg_red">{{ $element['type'] }}</a>
-            @elseif($element['type'] === 'tooling')
-            <a href="" class="type bg_purple">{{ $element['type'] }}</a>
-            @elseif($element['type'] === 'languages')
-            <a href="" class="type bg_yellow">{{ $element['type'] }}</a>
-            @elseif($element['type'] === 'techniques')
-            <a href="" class="type bg_blue">{{ $element['type'] }}</a>
-            @elseif($element['type'] === 'testing')
-            <a href="" class="type bg_green">{{ $element['type'] }}</a>
+            @if($serie['type'] === 'frameworks')
+            <a href="" class="type bg_red">{{ $serie['type'] }}</a>
+            @elseif($serie['type'] === 'tooling')
+            <a href="" class="type bg_purple">{{ $serie['type'] }}</a>
+            @elseif($serie['type'] === 'languages')
+            <a href="" class="type bg_yellow">{{ $serie['type'] }}</a>
+            @elseif($serie['type'] === 'techniques')
+            <a href="" class="type bg_blue">{{ $serie['type'] }}</a>
+            @elseif($serie['type'] === 'testing')
+            <a href="" class="type bg_green">{{ $serie['type'] }}</a>
             @endif
             <!-- /.type -->
 
-            <a class="name" href="#">{{ $element['name'] }}</a>
+            <a class="name" href="#">{{ $serie['name'] }}</a>
             <!-- /.name -->
 
-            <p class="text clamp">{{ $element['text'] }}</p>
+            <p class="text clamp">{{ $serie['text'] }}</p>
             <!-- /.text -->
 
             <div class="more_info d_f">
@@ -35,15 +35,15 @@
                         <p class="block"></p>
                         <p class="block"></p>
                     </div>
-                    <span>{{ $element['difficulty'] }} <br> Difficulty</span>
+                    <span>{{ $serie['difficulty'] }} <br> Difficulty</span>
                 </div>
                 <div class="episodes d_f">
                     <img src="{{asset('img/books.svg')}}">
-                    <span><a href="">{{ $element['episodes'] }} Lessons</a></span>
+                    <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
                 </div>
                 <div class="duration d_f">
                     <img src="{{asset('img/time.svg')}}">
-                    <span>{{ $element['duration'] }}</span>
+                    <span>{{ $serie['duration'] }}</span>
                 </div>
             </div>
             <!-- /.info -->
@@ -59,7 +59,7 @@
         <!-- /.col -->
 
         <div class="thumb">
-            <img src="{{ $element['thumbnail'] }}" alt="{{ $element['name'] }}">
+            <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
         </div>
         <!-- /.thumb -->
     </div>

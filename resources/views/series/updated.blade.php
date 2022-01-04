@@ -1,30 +1,31 @@
-@foreach(config('db.updated') as $item)
+@foreach($series['updated'] as $item)
 <div class="section_title">
     <h3>{{ $item['title'] }}</h3>
     <p>{{ $item['desc'] }}</p>
 </div>
 <!-- /.section_title -->
 
-@foreach($item['info'] as $element)
+
+@foreach($item['info'] as $index=>$serie)
 <div class="card bg_white">
     <div class="col">
-        @if($element['type'] === 'frameworks')
-        <a href="" class="type bg_red">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'tooling')
-        <a href="" class="type bg_purple">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'languages')
-        <a href="" class="type bg_yellow">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'techniques')
-        <a href="" class="type bg_blue">{{ $element['type'] }}</a>
-        @elseif($element['type'] === 'testing')
-        <a href="" class="type bg_green">{{ $element['type'] }}</a>
+        @if($serie['type'] === 'frameworks')
+        <a href="" class="type bg_red">{{ $serie['type'] }}</a>
+        @elseif($serie['type'] === 'tooling')
+        <a href="" class="type bg_purple">{{ $serie['type'] }}</a>
+        @elseif($serie['type'] === 'languages')
+        <a href="" class="type bg_yellow">{{ $serie['type'] }}</a>
+        @elseif($serie['type'] === 'techniques')
+        <a href="" class="type bg_blue">{{ $serie['type'] }}</a>
+        @elseif($serie['type'] === 'testing')
+        <a href="" class="type bg_green">{{ $serie['type'] }}</a>
         @endif
         <!-- /.type -->
 
-        <a class="name" href="#">{{ $element['name'] }}</a>
+        <a class="name" href="{{route('serie', ['id' => $index])}}">{{ $serie['name'] }}</a>
         <!-- /.name -->
 
-        <p class="text clamp">{{ $element['text'] }}</p>
+        <p class="text clamp">{{ $serie['text'] }}</p>
         <!-- /.text -->
 
         <div class="more_info d_f">
@@ -34,15 +35,15 @@
                     <p class="block"></p>
                     <p class="block"></p>
                 </div>
-                <span>{{ $element['difficulty'] }} <br> Difficulty</span>
+                <span>{{ $serie['difficulty'] }} <br> Difficulty</span>
             </div>
             <div class="episodes d_f">
                 <img src="{{asset('img/books.svg')}}">
-                <span><a href="">{{ $element['episodes'] }} Lessons</a></span>
+                <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
             </div>
             <div class="duration d_f">
                 <img src="{{asset('img/time.svg')}}">
-                <span>{{ $element['duration'] }}</span>
+                <span>{{ $serie['duration'] }}</span>
             </div>
         </div>
         <!-- /.info -->
@@ -58,7 +59,7 @@
     <!-- /.col -->
 
     <div class="thumb">
-        <img src="{{ $element['thumbnail'] }}" alt="{{ $element['name'] }}">
+        <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
     </div>
     <!-- /.thumb -->
 </div>
@@ -66,16 +67,16 @@
 @endforeach
 
 <div class="more">
-    @foreach(config('db.more_updated') as $item)
+    @foreach(config('db.series.more_updated') as $item)
     <div class="card bg_dark_blue_gradient">
         <h4>{{ $item['title'] }}</h4>
         <div class="grid d_g">
-            @foreach($item['info'] as $element)
+            @foreach($item['info'] as $serie)
             <div class="cell">
-                <img src="{{ $element['thumb'] }}" alt="{{ $element['name'] }}">
-                <h5 class="clamp">{{ $element['name'] }}</h5>
-                <h6>{{ $element['date'] }}</h6>
-                <p class="hide clamp">{{ $element['text'] }}</p>
+                <img src="{{ $serie['thumb'] }}" alt="{{ $serie['name'] }}">
+                <h5 class="clamp">{{ $serie['name'] }}</h5>
+                <h6>{{ $serie['date'] }}</h6>
+                <p class="hide clamp">{{ $serie['text'] }}</p>
                 <a href="" class="start_series">Start Series</a>
             </div>
             @endforeach
