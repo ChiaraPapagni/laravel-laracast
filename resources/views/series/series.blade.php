@@ -4,69 +4,96 @@
 
 @section('content')
 
-<div class="section">
-    @include('series.updated')
-</div>
+<section>
+    <div class="section">
+        @include('series.updated')
+    </div>
+</section>
 <!-- /.section (Recently Updated) -->
 
-<div class="section">
-    @include('series.trending')
-</div>
+<section>
+    <div class="section">
+        @include('series.trending')
+    </div>
+</section>
 <!-- /.section (Trending Series) -->
 
-<div class="section">
-    @include('series.grow_tall')
-</div>
+<section>
+    <div class="section">
+        @include('series.grow_tall')
+    </div>
+</section>
 <!-- /.section (Grow TALL) -->
 
-<div class="section">
-    @include('series.learn_laravel')
-</div>
+
+<section>
+    <div class="section">
+        @include('series.learn_laravel')
+    </div>
+</section>
 <!-- /.section (Learn Laravel) -->
 
-<div class="section">
-    @include('series.level_up')
-</div>
+<section>
+    <div class="section">
+        @include('series.level_up')
+    </div>
+</section>
 <!-- /.section (Level Up Your Testing) -->
 
-<div class="section">
-    @include('series.tools')
-</div>
+<section>
+    <div class="section">
+        @include('series.tools')
+    </div>
+</section>
 <!-- /.section (Learn a Tool) -->
 
-<div class="section">
-    @include('series.build')
-</div>
+<section>
+    <div class="section">
+        @include('series.build')
+    </div>
+</section>
 <!-- /.section (Build an App) -->
 
-<div class="section">
-    @include('series.featured')
-</div>
+<section>
+    <div class="section">
+        @include('series.featured')
+    </div>
+</section>
 <!-- /.section (Currently Featured) -->
 
-<div class="section">
-    @include('series.master')
-</div>
+<section>
+    <div class="section">
+        @include('series.master')
+    </div>
+</section>
 <!-- /.section (Master Your Code Editor) -->
 
-<div class="section">
-    @include('series.learn_oop')
-</div>
+<section>
+    <div class="section">
+        @include('series.learn_oop')
+    </div>
+</section>
 <!-- /.section (Learn OOP) -->
 
-<div class="section">
-    @include('series.whats_new')
-</div>
+<section>
+    <div class="section">
+        @include('series.whats_new')
+    </div>
+</section>
 <!-- /.section (What's New in Laravel?) -->
 
-<div class="section">
-    @include('series.new_to_laracast')
-</div>
+<section>
+    <div class="section">
+        @include('series.new_to_laracast')
+    </div>
+</section>
 <!-- /.section (New to Laracasts?) -->
 
-<div class="section">
-    @include('series.explore_topics')
-</div>
+<section>
+    <div class="section">
+        @include('series.explore_topics')
+    </div>
+</section>
 <!-- /.section (Explore Topics) -->
 
 @endsection

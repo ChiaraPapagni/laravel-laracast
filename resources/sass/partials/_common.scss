@@ -7,13 +7,11 @@
 .section {
     max-width: 1166px;
     margin: auto;
-    margin-top: 2rem;
 }
 
 .section_title {
     max-width: 650px;
-    margin: 3rem auto 1rem auto;
-    padding-bottom: 1rem;
+    margin: 0 auto;
     color: $laracast_dark_text_color;
     text-align: center;
     font-weight: 400;
@@ -23,7 +21,6 @@
         font-size: 2rem;
         font-weight: 400;
         letter-spacing: 0.02rem;
-        padding-top: 2rem;
         margin-bottom: 0.5rem;
     }
 
@@ -33,21 +30,29 @@
     }
 }
 
-.card {
-    position: relative;
+.card,
+.small_card {
+    margin-top: 2rem;
     overflow: hidden;
     border: 1px solid #78909c26;
     border-radius: 1rem;
+}
+
+.card {
+    position: relative;
     padding: 2rem 3rem;
-    margin-bottom: 2rem;
+}
+
+.large {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .small_card {
     height: 260px;
-    overflow: hidden;
-    border: 1px solid #78909c26;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
 }
 
 .d_f {
@@ -130,7 +135,7 @@
 }
 
 a.active {
-    color: $laracast_white;
+    color: $laracast_white !important;
     border-bottom: 4px solid $laracast_white;
 }
 

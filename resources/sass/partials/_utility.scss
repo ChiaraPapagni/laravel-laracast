@@ -6,7 +6,6 @@
 }
 
 
-
 body {
     width: 100%;
     background-color: $laracast_background_color;
@@ -16,6 +15,10 @@ body {
     color: #4d545d;
     font-size: 1rem;
     font-weight: 300;
+}
+
+section {
+    padding: 40px 30px;
 }
 
 h1,

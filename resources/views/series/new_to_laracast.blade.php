@@ -5,79 +5,87 @@
 </div>
 <!-- /.section_title -->
 
-<div class="card bg_white d_f">
-    @foreach($item['info'] as $index=>$serie)
-    @if($index === 0)
-    <div class="double_card_left">
-        <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
-        <!--/.thumbnail-->
+<div class="card bg_white">
+    <div class="d_f">
+        @foreach($item['info'] as $index=>$serie)
+        @if($index === 0)
+        <div class="double_card_left">
+            <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
+            <!--/.thumbnail-->
 
-        <div>
-            <a class="name" href="#">{{ $serie['name'] }}</a>
-            <!-- /.name -->
+            <div>
+                <a class="name" href="#">{{ $serie['name'] }}</a>
+                <!-- /.name -->
 
-            <p class="text clamp">{{ $serie['text'] }}</p>
-            <!-- /.text -->
+                <p class="text clamp">{{ $serie['text'] }}</p>
+                <!-- /.text -->
 
-            <div class="more_info d_f">
-                <div class="episodes d_f">
-                    <img src="{{asset('img/books.svg')}}">
-                    <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
+                <div class="more_info d_f">
+                    <div class="episodes d_f">
+                        <img src="{{asset('img/books.svg')}}">
+                        <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
+                    </div>
+                    <div class="duration d_f">
+                        <img src="{{asset('img/time.svg')}}">
+                        <span>{{ $serie['duration'] }}</span>
+                    </div>
                 </div>
-                <div class="duration d_f">
-                    <img src="{{asset('img/time.svg')}}">
-                    <span>{{ $serie['duration'] }}</span>
-                </div>
-            </div>
-            <!-- /.info -->
+                <!-- /.info -->
 
-            <div class="start">
-                <a href="">
-                    <img src="{{asset('img/play.svg')}}">
-                    <span>Start Series</span>
-                </a>
+                <div class="start">
+                    <a href="">
+                        <img src="{{asset('img/play.svg')}}">
+                        <span>Start Series</span>
+                    </a>
+                </div>
+                <!-- /.start -->
             </div>
-            <!-- /.start -->
         </div>
-    </div>
-    <!-- /.double_card_left -->
+        <!-- /.double_card_left -->
+        @endif
+        @endforeach
 
-    @elseif($index === 1)
-    <div class="double_card_right">
-        <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
-        <!--/.thumbnail-->
+        <div class="double_card_center"></div>
+        <!-- /.double_card_center -->
 
-        <div>
-            <a class="name" href="#">{{ $serie['name'] }}</a>
-            <!-- /.name -->
+        @foreach($item['info'] as $index=>$serie)
+        @if($index === 1)
+        <div class="double_card_right">
+            <img src="{{ $serie['thumbnail'] }}" alt="{{ $serie['name'] }}">
+            <!--/.thumbnail-->
 
-            <p class="text clamp">{{ $serie['text'] }}</p>
-            <!-- /.text -->
+            <div>
+                <a class="name" href="#">{{ $serie['name'] }}</a>
+                <!-- /.name -->
 
-            <div class="more_info d_f">
-                <div class="episodes d_f">
-                    <img src="{{asset('img/books.svg')}}">
-                    <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
+                <p class="text clamp">{{ $serie['text'] }}</p>
+                <!-- /.text -->
+
+                <div class="more_info d_f">
+                    <div class="episodes d_f">
+                        <img src="{{asset('img/books.svg')}}">
+                        <span><a href="">{{ $serie['episodes'] }} Lessons</a></span>
+                    </div>
+                    <div class="duration d_f">
+                        <img src="{{asset('img/time.svg')}}">
+                        <span>{{ $serie['duration'] }}</span>
+                    </div>
                 </div>
-                <div class="duration d_f">
-                    <img src="{{asset('img/time.svg')}}">
-                    <span>{{ $serie['duration'] }}</span>
-                </div>
-            </div>
-            <!-- /.info -->
+                <!-- /.info -->
 
-            <div class="start">
-                <a href="">
-                    <img src="{{asset('img/play.svg')}}">
-                    <span>Start Series</span>
-                </a>
+                <div class="start">
+                    <a href="">
+                        <img src="{{asset('img/play.svg')}}">
+                        <span>Start Series</span>
+                    </a>
+                </div>
+                <!-- /.start -->
             </div>
-            <!-- /.start -->
         </div>
-    </div>
-    <!-- /.double_card_right -->
+        <!-- /.double_card_right -->
 
-    @endif
-    @endforeach
+        @endif
+        @endforeach
+    </div>
 </div>
 @endforeach

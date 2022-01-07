@@ -17,7 +17,7 @@ Route::get('/topics', function () {
     return view('topics');
 })->name('topics');
 
-Route::get('/series', function () {
+Route::get('/', function () {
     $series = config('db.series');
     return view('series.series', compact('series'));
 })->name('series');

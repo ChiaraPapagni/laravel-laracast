@@ -5,7 +5,7 @@
 </div>
 <!-- /.section_title -->
 
-<div class="d_g" style="grid-template-columns: auto auto auto; column-gap: 2.5rem;">
+<div class="small_cards d_g" style="grid-template-columns: auto auto auto; column-gap: 2.5rem;">
     @foreach($item['info'] as $serie)
     <div class="small_card bg_white d_f">
         @if($serie['type'] === 'frameworks')

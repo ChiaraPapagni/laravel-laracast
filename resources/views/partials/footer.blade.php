@@ -1,5 +1,5 @@
 <footer id="site_footer">
-    <div>
+    <section>
         <div class="footer">
             <div class="top_footer">
                 <img src="{{ asset('img/mic.svg') }}" class="mic">
@@ -70,5 +70,5 @@
             </div>
             <!-- /.credits -->
         </div>
-    </div>
+    </section>
 </footer>
