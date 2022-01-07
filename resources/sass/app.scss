@@ -1459,6 +1459,10 @@
                     width: 22px;
                     background-color: transparent;
                     padding: 0;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
                 }
 
                 a {
@@ -1664,5 +1668,3 @@
         }
     }
 }
-
-@media (max-width: 500px) {}

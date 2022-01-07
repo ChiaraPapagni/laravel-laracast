@@ -1424,6 +1424,9 @@ h6 {
     background-color: transparent;
     padding: 0;
   }
+  #site_header nav .right img:hover {
+    background-color: transparent;
+  }
   #site_header nav .right a {
     display: none;
   }
